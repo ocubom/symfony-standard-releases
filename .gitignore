@@ -3,4 +3,6 @@ app/bootstrap.php.cache
 app/cache/*
 app/logs/*
 build/
-vendor/
+vendor
+bin
+composer.phar
