@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Symfony Standard Distribution Releases by ocubom</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Symfony Standard Distribution Releases</h1>
+        <p>Symfony Standard Distribution published (tagged) releases</p>
+
+        <p class="view"><a href="https://github.com/ocubom/symfony-standard-releases">View the Project on GitHub <small>ocubom/symfony-standard-releases</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ocubom/symfony-standard-releases/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ocubom/symfony-standard-releases/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ocubom/symfony-standard-releases">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>This projects collects all published (aka tagged) Symfony Standard Distribution releases to ease the author's update workflow.</p>
+
+<h1>"Official" update workflow</h1>
+
+<p>After the installation of the setup, you usually creates a clean git repository over the latest version of Symfony Standard Distribution and do no track changes (<a href="https://groups.google.com/forum/#!topic/symfony2/TFHgbsuDx9U/discussion">Source control on a composer-created framework project</a>).</p>
+
+<p>The "official" update process involves download the new composer or deps related files and run the suitable vendor manager to obtain new versions (see <a href="http://symfony.com/blog/symfony-2-1-3-released">Symfony 2.1.3 released</a>). This works but some files are not updated. In almost all cases this is not really a issue.</p>
+
+<h1>"Alternative" update workflow</h1>
+
+<p>The alternative uses merge of latest versions (provides by this repository as a remote) into the <code>master</code> branch of the code repository. This merges provides updated versions of composer and deps files and all related stuff of the distribution.</p>
+
+<h2>Initial setup</h2>
+
+<p>When starting a new project:</p>
+
+<ol>
+<li>Add this repository as remote <code>git remote add symfony-standard http://github.com/ocubom/symfony-standard-releases.git</code>
+</li>
+<li>Create your <code>master</code> branch from one version <code>git checkout -b master symfony-standard/2.1 # or 2.0</code>
+</li>
+<li>Install vendors <code>composer install</code>
+</li>
+</ol><p>The workflow can be also used on an existing project. In this case, the first setup is a bit more complex as it requires an initial merge.</p>
+
+<ol>
+<li>Add this repository as remote <code>git remote add symfony-standard http://github.com/ocubom/symfony-standard-releases.git</code>
+</li>
+<li>Merge the version you prefer into your <code>master</code> branch.</li>
+</ol><h2>Upgrade</h2>
+
+<p>After the initial setup, the upgrade will be fast:</p>
+
+<ol>
+<li>Get latest changes in remote repository: <code>git remote update</code>
+</li>
+<li>Merge latest version into your master branch: <code>git merge symfony-standard/2.1 # or 2.0</code>. This may generate some conflicts that you must solve by hand.</li>
+</ol><h1>Note</h1>
+
+<p>This repository contains just clones of the original commits tagged on the original <a href="http://github.com/symfony/symfony-standard">Symfony Standard Distribution</a> repository. Original author and dates are maintained.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ocubom">ocubom</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
